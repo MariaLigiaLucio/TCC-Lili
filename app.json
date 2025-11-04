@@ -1,4 +1,26 @@
 {
-  "name": "classe-a",
-  "slug": "classe-a"
+    "expo": {
+        "name": "Classe A",
+        "slug": "classe-a",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "scheme": "classea",
+        "userInterfaceStyle": "automatic",
+        "platforms": [
+            "android"
+        ],
+        "newArchEnabled": true,
+        "android": {
+            "adaptiveIcon": {
+                "backgroundColor": "#000000"
+            },
+            "package": "mobile.classea.com.br"
+        },
+        "plugins": [
+            "expo-router"
+        ],
+        "experiments": {
+            "typedRoutes": true
+        }
+    }
 }
