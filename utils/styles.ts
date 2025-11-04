@@ -44,6 +44,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 10,
     },
+    button_delete: {
+        backgroundColor: 'red',
+        paddingVertical: 12,
+        paddingHorizontal: 20,
+        borderRadius: 10,
+        width: '100%',
+        alignItems: 'center',
+        marginTop: 10,
+    },
     buttonText: {
         color: '#fff',
         fontSize: 16,

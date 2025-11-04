@@ -1,6 +1,7 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { Text, TouchableOpacity, View } from "react-native";
 import styles from "@/utils/styles";
+import api from "@/utils/api";
 
 export default function VehicleDetailScreen() {
 	const router = useRouter();
@@ -20,6 +21,17 @@ export default function VehicleDetailScreen() {
 				}
 			>
 				<Text style={styles.buttonText}>Ver Manutenções</Text>
+			</TouchableOpacity>
+			<TouchableOpacity
+				style={styles.button_delete}
+				onPress={() =>
+					api
+						.delete(`/veiculos/delete?id=${veiculo.id}`)
+						.then(() => router.back())
+						.catch((error) => console.error(error))
+				}
+			>
+				<Text style={styles.buttonText}>Apagar</Text>
 			</TouchableOpacity>
 		</View>
 	);

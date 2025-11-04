@@ -45,9 +45,36 @@ export default function Manutencoes() {
 				data={manutencoes}
 				keyExtractor={(item) => item.id}
 				renderItem={({ item }) => (
-					<Text style={styles.listText}>
-						{item.tipo} - {item.data} - R$ {item.custo}
-					</Text>
+					<View
+						style={{
+							flexDirection: "row",
+							alignItems: "center",
+							borderColor: "#0a8754",
+							borderWidth: 1,
+							marginBottom: 10,
+							padding: 10,
+							borderRadius: 5,
+						}}
+					>
+						<Text style={styles.listText}>
+							{item.tipo} - {item.data} - R$ {item.custo}
+						</Text>
+						<TouchableOpacity
+							style={{
+								backgroundColor: "red",
+								padding: 5,
+								borderRadius: 5,
+								marginLeft: 10,
+							}}
+							onPress={() => {
+                                api.delete(`/manutencoes/delete?id=${item.id}`).then(() => {
+                                    carregarManutencoes();
+                                }).catch((error) => console.error(error));
+							}}
+						>
+							<Text style={styles.buttonText}>Apagar</Text>
+						</TouchableOpacity>
+					</View>
 				)}
 				ListEmptyComponent={
 					<Text
