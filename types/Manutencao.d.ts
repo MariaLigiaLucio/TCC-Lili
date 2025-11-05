@@ -1,3 +1,5 @@
+import VeiculoType from "./Veiculo";
+
 export default interface ManutencaoType {
     id: string;
     veiculo_id: string;
