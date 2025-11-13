@@ -28,12 +28,21 @@ export default function BaseLayout() {
 					options={{ title: "Adicionar Veículo" }}
 				/>
 				<Stack.Screen
+					name="(tabs)/veiculos/editar"
+					options={{ title: "Editar Veículo" }}
+				/>
+				<Stack.Screen
 					name="(tabs)/manutencoes/index"
 					options={{ title: "Manutenções" }}
 				/>
 				<Stack.Screen
 					name="(tabs)/manutencoes/adicionar"
 					options={{ title: "Adicionar Manutenção" }}
+				/>
+
+				<Stack.Screen
+					name="(tabs)/manutencoes/editar"
+					options={{ title: "Editar Manutenção" }}
 				/>
 
 				<Stack.Screen

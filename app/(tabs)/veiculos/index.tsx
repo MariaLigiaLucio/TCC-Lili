@@ -52,7 +52,7 @@ export default function Veiculos() {
 						onPress={() =>
 							router.push({
 								pathname: "/veiculos/detalhes",
-								params: { ...item },
+								params: { id: item.id },
 							})
 						}
 					>
